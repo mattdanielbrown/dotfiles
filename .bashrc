@@ -218,6 +218,9 @@ connectivity debugging steps...
   * check route from home router to internet:
     traceroute google.com
 
+  * check hostnames can be resolved:
+    host www.integralist.co.uk
+
   * execute a dns lookup using different dns servers (one remote, one local):
     nslookup google.com 8.8.8.8
     nslookup google.com 192.168.1.1
@@ -418,7 +421,6 @@ PROMPT_COMMAND=prompt
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # we want Ctrl+f to 'find' files using fzf and copy filename to clipboard
-# we use `copy`, which is an alias for trimming newline before using pbcopy
 #
 bind -x '"\C-f": fzf --preview="cat {}" --preview-window=top:50%:wrap | pbcopy'
 
